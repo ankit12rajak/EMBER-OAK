@@ -1,0 +1,620 @@
+:root {
+  --surface-radius: 4px;
+  --surface-shadow: 0 5px 18px rgb(17 16 14 / 5%);
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: var(--gold);
+  outline-offset: 3px;
+}
+
+/* Customer-facing restaurant */
+.site-header {
+  height: 78px;
+  border-bottom-color: rgb(245 240 232 / 10%);
+  background: rgb(17 16 14 / 78%);
+  backdrop-filter: blur(10px);
+}
+
+.brand-name {
+  letter-spacing: 2.7px;
+}
+
+.main-nav {
+  gap: clamp(20px, 2.5vw, 38px);
+}
+
+.main-nav > button {
+  font-size: 11px;
+}
+
+.button {
+  min-height: 46px;
+  border-radius: 2px;
+  letter-spacing: 0.8px;
+}
+
+.button-gold {
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 12%);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.hero {
+  min-height: min(820px, 100svh);
+  background-color: #211d17;
+}
+
+.hero-image img {
+  object-position: center 55%;
+  filter: saturate(.88) contrast(1.04);
+}
+
+.hero-wash {
+  background:
+    linear-gradient(90deg, rgb(17 16 14 / 82%) 0%, rgb(17 16 14 / 53%) 42%, rgb(17 16 14 / 12%) 100%),
+    linear-gradient(0deg, rgb(17 16 14 / 53%) 0%, transparent 38%);
+}
+
+.hero-content {
+  width: min(850px, 74%);
+  padding-left: clamp(28px, 10.5vw, 164px);
+}
+
+.hero h1 {
+  font-size: clamp(58px, 7.4vw, 104px);
+  letter-spacing: -2.5px;
+  line-height: .94;
+}
+
+.hero-copy {
+  max-width: 410px;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.section-heading {
+  margin-bottom: 36px;
+}
+
+.signature-card .image-button,
+.menu-card-image,
+.gallery-tile,
+.experience-photo,
+.story-image-wrap,
+.chef-portrait {
+  background-color: #25211b;
+}
+
+.signature-card .image-button,
+.menu-card-image {
+  outline: 1px solid rgb(245 240 232 / 7%);
+  outline-offset: -1px;
+}
+
+.signature-info h3,
+.menu-card-title h3 {
+  line-height: 1.15;
+}
+
+.signature-card > p {
+  max-width: 390px;
+  line-height: 1.85;
+}
+
+.image-button img,
+.menu-card-image img,
+.gallery-tile img,
+.experience-photo img,
+.story-image-wrap img,
+.chef-portrait img {
+  filter: saturate(.92);
+}
+
+.gallery-grid {
+  gap: 10px;
+}
+
+.gallery-tile {
+  outline: 1px solid rgb(245 240 232 / 10%);
+  outline-offset: -1px;
+}
+
+.gallery-tile:hover img {
+  transform: scale(1.035);
+}
+
+.review-card {
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.review-card:hover {
+  border-color: rgb(201 169 110 / 32%);
+  background: rgb(17 16 14 / 52%);
+}
+
+.review-card blockquote {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.reservation-banner {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgb(201 169 110 / 5%), transparent 48%),
+    var(--ink);
+}
+
+.site-footer {
+  border-top: 1px solid rgb(245 240 232 / 7%);
+}
+
+.footer-column > a,
+.footer-links button,
+.footer-links a {
+  transition: color 160ms ease;
+}
+
+.booking-fields input,
+.booking-fields select {
+  min-height: 44px;
+  border-radius: 2px;
+}
+
+.table-option {
+  border-radius: 2px;
+}
+
+.booking-modal,
+.food-detail-modal {
+  border-radius: 3px;
+  box-shadow: 0 20px 70px rgb(0 0 0 / 38%);
+}
+
+.toast {
+  border-radius: 3px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 34%);
+}
+
+/* Front-of-house operations */
+.staff-app {
+  --staff-bg: #f2f3f2;
+  --staff-ink: #202b31;
+  --staff-muted: #727f86;
+}
+
+.staff-sidebar {
+  background: #19211f;
+}
+
+.staff-topbar {
+  box-shadow: 0 2px 8px rgb(28 38 35 / 3%);
+}
+
+.staff-content {
+  padding-top: 29px;
+}
+
+.staff-page-heading h1 {
+  color: #222d31;
+  font-family: var(--serif);
+  font-size: 31px;
+  font-weight: 500;
+  letter-spacing: -.45px;
+}
+
+.staff-page-heading p {
+  font-size: 11px;
+}
+
+.staff-button {
+  min-height: 40px;
+  border-radius: 3px;
+  font-size: 10px;
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.staff-button:hover:not(:disabled) {
+  box-shadow: 0 4px 11px rgb(32 43 49 / 10%);
+}
+
+.panel,
+.stat-card,
+.reservation-summary-card,
+.floor-zone,
+.floor-layout,
+.new-reservation-form {
+  border-radius: 4px;
+  box-shadow: var(--surface-shadow);
+}
+
+.panel-heading h2 {
+  font-size: 14px;
+}
+
+.floor-layout {
+  padding: 20px;
+}
+
+.floor-zone {
+  padding: 20px 22px 22px;
+}
+
+.table-grid {
+  gap: 17px 21px;
+}
+
+.floor-table {
+  min-height: 96px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(32 45 59 / 5%);
+}
+
+.floor-table.available {
+  border-color: #aed0bb;
+  background: #f5faf6;
+}
+
+.floor-table.reserved {
+  border-color: #dec38e;
+  background: #fffaf0;
+}
+
+.floor-table.occupied {
+  border-color: #a8c3d9;
+  background: #f2f7fb;
+}
+
+.floor-table.billing {
+  border-color: #c1b1d8;
+  background: #f7f4fa;
+}
+
+.floor-table.unavailable {
+  border-color: #d1d6d9;
+  background: #e9edef;
+}
+
+.floor-table.table-selected,
+.floor-table:focus-visible {
+  border-color: #a87b3d;
+  box-shadow: 0 0 0 3px rgb(185 139 67 / 20%);
+}
+
+.table-number {
+  font-family: var(--serif);
+  font-size: 21px;
+}
+
+.table-status-text {
+  font-size: 8px;
+  letter-spacing: .65px;
+}
+
+.status-badge {
+  border-radius: 2px;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.data-table-wrap {
+  border-radius: 3px;
+}
+
+.staff-table th {
+  font-size: 8px;
+  letter-spacing: .6px;
+}
+
+.staff-table td {
+  font-size: 10px;
+}
+
+.row-action-select,
+.staff-select,
+.filter-select,
+.pos-select-row select {
+  border-radius: 3px;
+}
+
+.staff-toast {
+  border-radius: 4px;
+  box-shadow: 0 12px 28px rgb(22 32 39 / 20%);
+}
+
+/* Kitchen display: prioritize ticket scanning at a glance */
+.kitchen-display {
+  background: #10171d;
+}
+
+.kitchen-heading h1 {
+  font-size: 43px;
+}
+
+.kitchen-column {
+  border-radius: 4px;
+}
+
+.kitchen-column-title h2 {
+  font-size: 11px;
+  letter-spacing: .15px;
+}
+
+.kitchen-ticket {
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 13%);
+}
+
+.kitchen-ticket-head {
+  min-height: 48px;
+  padding-inline: 12px;
+}
+
+.kitchen-ticket-head > span:first-child {
+  color: #f3d49b;
+  font-family: var(--serif);
+  font-size: 21px;
+  letter-spacing: .1px;
+}
+
+.kitchen-ticket .status-badge {
+  padding: 5px 7px;
+  font-size: 8px;
+}
+
+.kitchen-ticket-table {
+  min-height: 47px;
+  margin: 0 9px 7px;
+  padding: 7px 9px;
+  border: 1px solid #39444d;
+  border-radius: 3px;
+  background: #1a252d;
+}
+
+.kitchen-ticket-table strong {
+  color: #f3f0e8;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.kitchen-ticket-table > span {
+  font-size: 8px;
+}
+
+.kitchen-ticket-items {
+  gap: 2px;
+  padding-inline: 12px;
+}
+
+.kitchen-ticket-item {
+  min-height: 34px;
+  grid-template-columns: 32px minmax(0, 1fr) 15px;
+  gap: 8px;
+  color: #f0f2f0;
+  font-size: 11px;
+}
+
+.kitchen-qty {
+  font-size: 13px;
+}
+
+.kitchen-ticket-note {
+  margin-inline: 12px;
+  padding: 8px 9px;
+}
+
+.kitchen-ticket-note > span,
+.kitchen-ticket-note p {
+  font-size: 9px;
+}
+
+.kitchen-ticket-foot {
+  padding: 9px 12px;
+  font-size: 9px;
+}
+
+.kitchen-action {
+  width: calc(100% - 24px);
+  min-height: 43px;
+  margin: 0 12px 12px;
+  padding-inline: 11px;
+  border-radius: 3px;
+  font-size: 10px;
+  letter-spacing: .65px;
+}
+
+.served-label {
+  min-height: 40px;
+  padding-inline: 12px;
+  font-size: 9px;
+}
+
+/* Management analytics */
+.admin-sidebar {
+  background: #191f1d;
+}
+
+.admin-nav a {
+  min-height: 44px;
+  border-radius: 3px;
+}
+
+.admin-kpi,
+.admin-panel {
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgb(36 42 39 / 4%);
+}
+
+.admin-kpi {
+  min-height: 140px;
+  padding: 15px;
+}
+
+.admin-kpi-title {
+  color: #686f69;
+  font-size: 10px;
+}
+
+.admin-kpi > strong {
+  font-size: clamp(20px, 1.7vw, 25px);
+}
+
+.admin-kpi-detail {
+  color: #81877f;
+  font-size: 9px;
+}
+
+.admin-panel-title h2 {
+  font-size: 21px;
+}
+
+.admin-period-tabs button,
+.admin-toggle-tabs button {
+  min-height: 29px;
+  border-radius: 2px;
+  font-size: 9px;
+}
+
+.admin-data-table th {
+  font-size: 8px;
+}
+
+.admin-data-table td {
+  padding-block: 11px;
+  font-size: 9px;
+}
+
+.category-main strong,
+.payment-row strong {
+  font-size: 10px;
+}
+
+.category-main small,
+.payment-row small,
+.status-row > span,
+.status-row > small,
+.most-used-row,
+.most-used-row strong,
+.most-used-row small {
+  font-size: 9px;
+}
+
+.admin-chart-wrap .recharts-cartesian-axis-tick text,
+.weekday-chart-wrap .recharts-cartesian-axis-tick text {
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    height: 70px;
+  }
+
+  .hero {
+    min-height: 670px;
+    height: min(790px, 100svh);
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 12vw, 79px);
+  }
+
+  .signature-grid {
+    gap: 27px;
+  }
+
+  .staff-page-heading h1 {
+    font-size: 25px;
+  }
+
+  .floor-layout {
+    padding: 10px;
+  }
+
+  .floor-zone {
+    padding: 13px 10px 15px;
+  }
+
+  .floor-table {
+    min-height: 82px;
+  }
+
+  .table-number {
+    font-size: 19px;
+  }
+
+  .kitchen-ticket-head {
+    min-height: 48px;
+  }
+
+  .kitchen-ticket-head > span:first-child {
+    font-size: 23px;
+  }
+
+  .kitchen-ticket-table strong {
+    font-size: 18px;
+  }
+
+  .kitchen-ticket-item {
+    min-height: 38px;
+    font-size: 12px;
+  }
+
+  .kitchen-action {
+    min-height: 48px;
+    font-size: 11px;
+  }
+
+  .admin-kpi {
+    min-height: 119px;
+    padding: 10px;
+  }
+
+  .admin-kpi-title {
+    font-size: 8px;
+  }
+
+  .admin-kpi-detail {
+    font-size: 7px;
+  }
+
+  .admin-panel-title h2 {
+    font-size: 18px;
+  }
+
+  .admin-period-tabs button,
+  .admin-toggle-tabs button {
+    min-height: 25px;
+    font-size: 8px;
+  }
+
+  .admin-data-table td {
+    padding-block: 9px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
